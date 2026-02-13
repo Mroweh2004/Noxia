@@ -1,10 +1,4 @@
 <p align="center">
-<a href="#" target="_blank">
-<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Noxia Logo">
-</a>
-</p>
-
-<p align="center">
 <strong>Noxia – Laravel E-Commerce Management System</strong>
 </p>
 
@@ -42,8 +36,53 @@ Make sure you have:
 
 ---
 
-## 📥 Clone the Repository
+## ⚙️ Installation
 
+1. **👤 User Configuration (for new developers)**
+Before making commits, set your Git username and email so commits are correctly attributed:
 ```bash
-git clone https://github.com/Mroweh2004/Noxia.git
-cd Noxia
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+```
+
+2. Clone the repository  
+```bash
+git clone https://github.com/your-username/ghorfa.git
+```
+
+3. Change directory to access the root folder of the project:
+```bash
+cd Ghorfa-Project
+```
+
+4. copy .env.example to .env and update mysql details
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Ghorfa-Project-DB
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+5. Run composer install:
+```bash
+composer install
+```
+
+6. Generate application key:
+```bash
+php artisan key:generate
+```
+
+7. Run the migrations inside the container, and then clear the cache:
+```bash
+php artisan migrate
+php artisan cache:clear
+```
+
+8. Run seeders in this order:
+```bash
+php artisan db:seed
+```
+
